@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bashio
+# vim: ft=bash
+# shellcheck shell=bash
+# ==============================================================================
+# Runs truma_service
+# ==============================================================================
+
+# Wait mosquitto
+bashio::net.wait_for $(bashio::config 'port')
+
+# Start the inetbox service
+bashio::log.info "Starting Truma Inetbox service..."
+exec truma_service

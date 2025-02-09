@@ -1,0 +1,41 @@
+name: "Truma inetbox"
+description: "My first real add-on!"
+version: "1.0.0"
+slug: "inetbox"
+init: false
+uart: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  log_level: "INFO"
+  host: "addon_core_mosquitto"
+  port: 1883
+  username: ""
+  password: ""
+  keepalive: 60
+  serial_device: "/dev/serial0"
+  baudrate: 9600
+  timeout: 0.5
+schema:
+  log_level: list(NOTSET|DEBUG|INFO|WARNING|ERROR|CRITICAL)
+  host: str
+  username: str
+  password: password
+  port: port
+  keepalive: int
+  serial_device: str
+  baudrate: int
+  timeout: float(0.1,)
+
+# @todo: Add TLS
+# tls:
+#   ca_certs: /path/to/ca.pem
+#   certfile: /path/to/client.pem
+#   keyfile: /path/to/key.pem
+#   cert_reqs: CERT_REQUIRED
+#   tls_version: PROTOCOL_TLS
+#   ciphers: None

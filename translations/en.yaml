@@ -1,0 +1,31 @@
+---
+configuration:
+  host: 
+    name: MQTT Broker Host
+    description: >-
+      The URL for the MQTT Broker e.g. "homassistant.local" or "addon_core_mosquitto" 
+      for using the internal network
+  port: 
+    name: MQTT Port
+  username: 
+    name: User
+    description: >-
+      Leave blank for not authentication
+  password: 
+    name: Password
+    description: >-
+      Leave blank for not authentication
+  keepalive: 
+    name: MQTT Keepalive
+  log_level:
+    name: Log Level
+    description: >-
+      See https://docs.python.org/3/library/logging.html#logging-levels for details
+  serial_device:
+    name: Device
+    description: >-
+      On Raspberry Pi it is most likely "/dev/serial0"
+  baudrate:
+    name: Baudrate
+  timeout:
+    name: Timeout
