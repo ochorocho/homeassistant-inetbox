@@ -3,29 +3,63 @@ configuration:
   host: 
     name: MQTT Broker Host
     description: >-
-      The URL for the MQTT Broker e.g. "homassistant.local" or "addon_core_mosquitto" 
-      for using the internal network
+      The URL for the MQTT Broker. In case the "mosquitto" HomeAssistant add-on is used
+      the url is "addon_core_mosquitto" (internal network) or "homeassistant.local" (external network).
+      In case the MQTT Broker is running on another device use the IP or hostname of the device.
   port: 
     name: MQTT Port
   username: 
     name: User
     description: >-
-      Leave blank for not authentication
+      Leave blank for not authentication.
   password: 
     name: Password
     description: >-
-      Leave blank for not authentication
+      Leave blank for not authentication.
   keepalive: 
     name: MQTT Keepalive
+    description: >-
+      Interval in seconds.
+      See https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Keep_Alive for details.
   log_level:
     name: Log Level
     description: >-
-      See https://docs.python.org/3/library/logging.html#logging-levels for details
+      See https://docs.python.org/3/library/logging.html#logging-levels for details.
   serial_device:
-    name: Device
+    name: Serial Device
     description: >-
-      On Raspberry Pi it is most likely "/dev/serial0"
+      On Raspberry Pi it is most likely "/dev/serial0".
   baudrate:
     name: Baudrate
   timeout:
     name: Timeout
+  use_tls:
+    name: Use TLS
+    description: >-
+      The below settings are only use when "Use TLS" is enabled.
+  cert_reqs:
+    name: Require Client Certificate
+    description: >-
+      If enabled client will need to provide its own certificate on top of username/password. 'cafile' must be set.
+  certfile:
+    name: CA file
+    description: >-
+      A file containing a certificate, including its chain.
+      Place this file in the Home Assistant `ssl` folder.
+  ca_certs:
+    name: CA file
+    description: >-
+      A file containing a root certificate that signed the client certificate (only used if 'use_tls' enabled). 
+      Place this file in the Home Assistant `ssl` folder.
+  keyfile:
+    name: Private Key File
+    description: >-
+      A file containing the private key. Place this file in the Home Assistant `ssl` folder.
+  tls_version:
+    name: TLS version
+    description: >-
+      See https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLS for details.
+  ciphers:
+    name: Ciphers
+    description: >-
+      See https://docs.python.org/3/library/ssl.html#ssl.SSLContext.get_ciphers for details.

@@ -20,6 +20,13 @@ options:
   serial_device: "/dev/serial0"
   baudrate: 9600
   timeout: 0.5
+  use_tls: false
+  cert_reqs: CERT_REQUIRED
+  ca_certs: ca.pem
+  certfile: client.pem
+  keyfile: key.pem
+  tls_version: PROTOCOL_TLS
+  ciphers: None
 schema:
   log_level: list(NOTSET|DEBUG|INFO|WARNING|ERROR|CRITICAL)
   host: str
@@ -30,12 +37,10 @@ schema:
   serial_device: str
   baudrate: int
   timeout: float(0.1,)
-
-# @todo: Add TLS
-# tls:
-#   ca_certs: /path/to/ca.pem
-#   certfile: /path/to/client.pem
-#   keyfile: /path/to/key.pem
-#   cert_reqs: CERT_REQUIRED
-#   tls_version: PROTOCOL_TLS
-#   ciphers: None
+  use_tls: bool
+  cert_reqs: list(CERT_NONE|CERT_OPTIONAL|CERT_REQUIRED)
+  ca_certs: str
+  certfile: str
+  keyfile: str
+  tls_version: list(PROTOCOL_TLS|PROTOCOL_TLS_CLIENT|PROTOCOL_TLS_SERVER|PROTOCOL_SSLv3||)
+  ciphers: str
