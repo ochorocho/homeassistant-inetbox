@@ -16,7 +16,7 @@ else
 fi
 
 if [[ -z "$(bashio::config 'use_tls')" ]]; then
-    bashio::log.info "TLS enabled - certs are store in /ssl/<filename>"
+    bashio::log.info "TLS enabled - certs are stored in /ssl/<filename>"
 fi
 
 # Get configuration values and write /etc/miqro.yml configuration

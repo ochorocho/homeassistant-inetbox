@@ -42,5 +42,5 @@ schema:
   ca_certs: str
   certfile: str
   keyfile: str
-  tls_version: list(PROTOCOL_TLS|PROTOCOL_TLS_CLIENT|PROTOCOL_TLS_SERVER|PROTOCOL_SSLv3||)
+  tls_version: list(PROTOCOL_TLS|PROTOCOL_TLS_CLIENT|PROTOCOL_TLS_SERVER|PROTOCOL_SSLv3)
   ciphers: str
