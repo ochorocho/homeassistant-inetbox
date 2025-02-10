@@ -1,5 +1,5 @@
 name: "Truma inetbox"
-description: "My first real add-on!"
+description: "Transform Home Assistant into a Inetbox to control mobile heater and AC of your caravan."
 version: "1.0.0"
 slug: "inetbox"
 init: false
