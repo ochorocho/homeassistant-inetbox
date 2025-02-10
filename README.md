@@ -17,3 +17,10 @@ This is based on [inetbox.py](https://github.com/danielfett/inetbox.py).
 ## ToDo
 
 * create cards
+* Autodiscovery: https://community.home-assistant.io/t/long-setup-time-for-mqtt-integration/355358/25
+    https://www.home-assistant.io/integrations/mqtt/#device-discovery-payload
+* Add service:truma options
+    log_dir: /var/log/truma
+    debug_app: True
+    debug_lin: True
+    debug_protocol: True

@@ -12,7 +12,7 @@ arch:
   - i386
 options:
   log_level: "INFO"
-  host: "addon_core_mosquitto"
+  host: "core-mosquitto"
   port: 1883
   username: ""
   password: ""

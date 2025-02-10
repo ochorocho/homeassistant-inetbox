@@ -4,7 +4,7 @@ configuration:
     name: MQTT Broker Host
     description: >-
       The URL for the MQTT Broker. In case the "mosquitto" HomeAssistant add-on is used
-      the url is "addon_core_mosquitto" (internal network) or "homeassistant.local" (external network).
+      the url is "core-mosquitto" (internal network) or "homeassistant.local" (external network).
       In case the MQTT Broker is running on another device use the IP or hostname of the device.
   port: 
     name: MQTT Port
