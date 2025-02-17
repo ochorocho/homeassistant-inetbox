@@ -1,6 +1,6 @@
 name: "Truma inetbox"
 description: "Transform Home Assistant into a Inetbox to control mobile heater and AC of your caravan."
-version: "dev"
+version: "1.0.2"
 slug: "inetbox"
 init: false
 uart: true
