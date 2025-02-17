@@ -1,0 +1,17 @@
+broker:
+  host: core-mosquitto
+  port: 1883
+  keepalive: 60
+log_level: INFO
+services:
+  truma:
+    serial_device: /dev/serial0
+    baudrate: 9600
+    timeout: 0.5
+    debug_app: True
+    debug_lin: True
+    debug_protocol: True
+
+auth:
+  username: "mosquitto"
+  password: "XXXXX"
