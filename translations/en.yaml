@@ -28,7 +28,7 @@ configuration:
   serial_device:
     name: Serial Device
     description: >-
-      On Raspberry Pi it is most likely "/dev/serial0".
+      On Raspberry Pi it is most likely "/dev/serial0" or "/dev/ttyAMA0".
   baudrate:
     name: Baudrate
   timeout:

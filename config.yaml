@@ -17,11 +17,11 @@ options:
   username: ""
   password: ""
   keepalive: 60
-  serial_device: "/dev/serial0"
+  serial_device: "/dev/ttyAMA0"
   baudrate: 9600
   timeout: 0.5
   use_tls: false
-  cert_reqs: CERT_REQUIRED
+  cert_reqs: CERT_NONE
   ca_certs: ca.pem
   certfile: client.pem
   keyfile: key.pem
@@ -34,7 +34,7 @@ schema:
   password: password
   port: port
   keepalive: int
-  serial_device: str
+  serial_device: device(subsystem=tty)
   baudrate: int
   timeout: float(0.1,)
   use_tls: bool
