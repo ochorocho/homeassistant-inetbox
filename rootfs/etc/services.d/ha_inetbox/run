@@ -10,4 +10,4 @@ bashio::net.wait_for $(bashio::config 'port')
 
 # Start the inetbox service
 bashio::log.info "Starting Truma Inetbox service..."
-exec python3 /etc/services.d/inetbox/homeassistant_truma_service.py
+exec cd /etc/services.d/ && python -m  ha_inetbox.homeassistant_truma_service
