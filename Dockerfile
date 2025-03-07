@@ -7,5 +7,8 @@ RUN pip3 install inetbox-py --break-system-packages
 
 # Copy rootfs
 COPY rootfs /
+RUN chmod a+x /run.sh /write_configuration.sh
+
+CMD [ "/run.sh" ]
 
 WORKDIR /

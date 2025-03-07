@@ -4,7 +4,6 @@ from ha_inetbox.homeassistant_truma_service import HomeAssistantTrumaService
 rel_no = "2.6.5"
 
 # taken from https://github.com/mc0110/inetbox2mqtt/blob/6d9241d90906d3619b7ae39a729453872a695e64/src/main1.py:
-
 topic_root      = HomeAssistantTrumaService.SERVICE_NAME
 Pub_Prefix      = 'service/' + topic_root + '/control_status/' 
 
