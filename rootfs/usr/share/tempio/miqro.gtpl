@@ -8,6 +8,9 @@ services:
     serial_device: {{ .serial_device }}
     baudrate: {{ .baudrate }}
     timeout: {{ .timeout }}
+    debug_app: True
+    debug_lin: True
+    debug_protocol: True
 
 {{ if and .username .password }}
 auth: 
